@@ -62,3 +62,13 @@
         namespace: glusterns
         service_acct: recycler-sa
         image: johnstrunk/gluster-subvol-volrecycler:latest
+
+  - include_role:
+      name: gluster-subvol-recycler
+    vars:
+      gluster_subvol_recycler:
+        supervol_name: supervol01
+        gluster_endpoint: mycluster
+        namespace: glusterns
+        service_acct: recycler-sa
+        image: uberblock/gluster-block-subvol-volrecycler:latest
